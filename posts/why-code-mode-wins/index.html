@@ -10,11 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://sanjayshekhar.in/category/mcp/">
+        <link rel="canonical" href="https://sanjayshekhar.in/posts/why-code-mode-wins/">
       
       
-        <link rel="prev" href="../llm-tooling/">
+        <link rel="prev" href="../..">
       
+      
+        <link rel="next" href="../dynamic-tool-discovery/">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>MCP - Sanjay Shekhar</title>
+        <title>Code execution: a more efficient way for AI agents to use tools - Sanjay Shekhar</title>
       
     
     
@@ -86,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mcp" class="md-skip">
+        <a href="#code-execution-a-more-efficient-way-for-ai-agents-to-use-tools" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MCP
+              Code execution: a more efficient way for AI agents to use tools
             
           </span>
         </div>
@@ -266,8 +268,6 @@
   
   
   
-    
-  
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
@@ -277,7 +277,7 @@
   <span class="md-ellipsis">
     
   
-    Sanjay Shekhar
+    Home
   
 
     
@@ -296,119 +296,6 @@
   
     
   
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../agents/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Agents
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../llm-tooling/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    LLM Tooling
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    
-      
-    
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -419,6 +306,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code execution: a more efficient way for AI agents to use tools
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -426,7 +331,7 @@
   <span class="md-ellipsis">
     
   
-    MCP
+    Code execution: a more efficient way for AI agents to use tools
   
 
     
@@ -436,14 +341,129 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The three approaches
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models-handle-code-better-than-tool-call-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models handle code better than tool-call formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-benchmarks-suggest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the benchmarks suggest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compared-to-direct-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compared to direct MCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compared-to-open-interpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compared to Open Interpreter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-each-approach-fits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When each approach fits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dynamic-tool-discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stop putting every tool in your agent's context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -468,6 +488,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The three approaches
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models-handle-code-better-than-tool-call-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models handle code better than tool-call formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-benchmarks-suggest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the benchmarks suggest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compared-to-direct-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compared to direct MCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compared-to-open-interpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compared to Open Interpreter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-each-approach-fits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When each approach fits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -475,64 +580,50 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="mcp">MCP<a class="headerlink" href="#mcp" title="Permanent link">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2026-06-29 00:00:00+00:00">June 29, 2026</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../agents/" class="md-meta__link">Agents</a>, 
-              <a href="./" class="md-meta__link">MCP</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              7 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="why-code-mode-beats-raw-mcp-and-open-interpreter"><a class="toclink" href="../../2026/06/29/why-code-mode-wins/">Why Code Mode Beats Raw MCP and Open Interpreter</a></h2>
-<p>There are three popular ways to let a language model actually <em>do</em> something instead of just talking about it. You can expose tools to it directly over MCP and let it call them. You can hand it a code interpreter and let it run whatever it writes, the Open Interpreter approach. Or you can do something in between: turn your tools into a code API and let the model write code that calls them. That last option, which Cloudflare has branded "Code Mode," is the one I think wins for most serious agent work, and the reasons are not just architectural taste. There is benchmark evidence behind it.</p>
-<p>Let me lay out why.</p>
-<h3 id="the-three-approaches-in-one-paragraph-each"><a class="toclink" href="../../2026/06/29/why-code-mode-wins/#the-three-approaches-in-one-paragraph-each">The three approaches in one paragraph each</a></h3>
-<p><strong>Direct MCP tool calling.</strong> The Model Context Protocol gives agents a uniform way to discover and invoke external tools. In the standard setup, each tool is presented to the model directly, and the model emits a special tool-call token followed by a JSON blob naming the tool and its arguments. The harness parses that, runs the tool, and feeds the result back into the model. It is clean, standardized, and works. The catch is that those tool-call tokens are not something models saw much of during pretraining. They are trained on them after the fact, usually with synthetic data, so models are noticeably weaker at producing them than at producing ordinary text or code.</p>
-<p><strong>Open Interpreter.</strong> This open-source project gives the model a pair of hands on your actual machine. You describe a task in plain English, the model writes Python, JavaScript, or shell code, and Open Interpreter runs it locally with your approval, with full access to your files and environment. It is fantastic for interactive exploration and one-off automation. But it works by handing the model your whole computer, which is exactly where its weaknesses come from: it runs with broad local access, it is non-deterministic, and in its default online mode it ships data to its own hosted services for code hints and screen reading.</p>
-<p><strong>Code Mode.</strong> Here you take the same MCP tools, convert their schemas into a typed code API (TypeScript, in Cloudflare's implementation), and ask the model to write code against that API. The code runs in an isolated sandbox whose only window to the outside world is the bindings representing your connected MCP servers. The model gets to play to its strongest skill, writing code, while you keep the tight, standardized tool surface that MCP gives you.</p>
-<h3 id="the-core-insight-models-write-code-better-than-they-emit-tool-calls"><a class="toclink" href="../../2026/06/29/why-code-mode-wins/#the-core-insight-models-write-code-better-than-they-emit-tool-calls">The core insight: models write code better than they emit tool calls</a></h3>
-<p>This is the load-bearing claim, so it deserves evidence rather than vibes.</p>
-<p>The cleanest study is the CodeAct paper, "Executable Code Actions Elicit Better LLM Agents" (ICML 2024). The authors compared three ways of expressing an agent's actions: text, JSON function calls, and executable Python code. Across 17 different open and proprietary models, code actions came out ahead. On simple one-tool tasks the formats were roughly comparable, but on their multi-tool, multi-turn benchmark (M3ToolEval), code actions delivered up to about 20 percentage points higher success than the JSON and text baselines. Just as important for cost, code actions needed roughly 30 percent fewer steps to finish a task, because the model could compose several operations in a single block instead of round-tripping through the harness once per call.</p>
-<p>The reasons are intuitive once you see them. Code gives the model control flow (loops, conditionals) and data flow (variables, intermediate results) inside a single action. It lets the model reuse functions from libraries it already knows. And critically, pretraining is saturated with real code from millions of projects, while tool-call formats are a thin, mostly synthetic slice of training data. As the paper puts it, optimizing for code actions is a better route to tool use than fine-tuning toward JSON, because the models already arrive with strong code ability baked in.</p>
-<p>Cloudflare reached the same conclusion from production experience rather than a benchmark, and framed it memorably: making a model do tasks through tool-calling is like teaching Shakespeare a month of Mandarin and then asking for his best play. The talent is there. You are just forcing it through a channel it was never fluent in.</p>
-<p>It is worth being honest about the ceiling here too. Even on the dedicated tool-calling leaderboards, the top models top out around 75 percent overall accuracy on the current Berkeley Function Calling Leaderboard (BFCL v4), which means direct tool calling still fails a meaningful fraction of the time. That headroom is exactly what a better action format is trying to recover.</p>
-<h3 id="where-code-mode-beats-raw-mcp"><a class="toclink" href="../../2026/06/29/why-code-mode-wins/#where-code-mode-beats-raw-mcp">Where Code Mode beats raw MCP</a></h3>
-<p>If models are better at code, then wrapping MCP tools in a code API and letting the model write against it captures that advantage directly. Three concrete wins follow.</p>
-<p><strong>It scales to many tools.</strong> Present a model with dozens of raw tools and it starts to struggle to pick the right one. Present the same capabilities as a typed API with doc comments and it behaves much more like a coding assistant browsing a library, which it is good at.</p>
-<p><strong>It stops wasting tokens on hand-offs.</strong> With direct calling, every intermediate result has to pass back through the model just to be copied into the next call. With code, the model writes a script that chains the calls, keeps the intermediate data in variables, and only reads back the final answer. That is the same 30-percent-fewer-steps effect CodeAct measured, and since model calls usually dominate agent cost, it is a real bill reduction, not just elegance.</p>
-<p><strong>It keeps MCP's best property.</strong> You do not lose anything that made MCP good. The uniform discovery, the standardized auth handled out of band, the self-describing schemas: all of that still drives the generated code API. You are changing how the model <em>consumes</em> the tools, not throwing away the protocol.</p>
-<h3 id="where-code-mode-beats-open-interpreter"><a class="toclink" href="../../2026/06/29/why-code-mode-wins/#where-code-mode-beats-open-interpreter">Where Code Mode beats Open Interpreter</a></h3>
-<p>Open Interpreter already embraces the "let the model write code" insight, so the gap here is not about action format. It is about safety and control.</p>
-<p><strong>Sandboxing by default, not by trust.</strong> Open Interpreter's power is that it runs code on your real machine with access to your files, which is also its danger. Code Mode inverts this. The sandbox starts with no general internet or filesystem access at all, and the only way out is through the specific MCP bindings you granted. You do not have to reason about what the model might touch, because the boundary is defined by the API surface you exposed.</p>
-<p><strong>No keys to leak.</strong> Because the sandbox reaches tools through bindings rather than by making authenticated network calls itself, the access tokens live with the supervisor and never enter the model's reach. The model literally cannot write code that exfiltrates a key it never sees. With a local interpreter holding your environment variables, that guarantee is much harder to make.</p>
-<p><strong>Built for agents, not just a human at a terminal.</strong> Open Interpreter shines as an interactive co-pilot where a person approves each step and the non-determinism is fine. Code Mode is designed for unattended agent loops: disposable, fast-starting sandboxes (Cloudflare uses lightweight isolates that spin up in milliseconds), a constrained tool surface, and no human in the approval path on every action.</p>
-<h3 id="side-by-side"><a class="toclink" href="../../2026/06/29/why-code-mode-wins/#side-by-side">Side by side</a></h3>
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="code-execution-a-more-efficient-way-for-ai-agents-to-use-tools">Code execution: a more efficient way for AI agents to use tools<a class="headerlink" href="#code-execution-a-more-efficient-way-for-ai-agents-to-use-tools" title="Permanent link">&para;</a></h1>
+<p><em>Published June 29, 2026</em></p>
+<p>AI agents need to take actions, not just produce text. There are three common ways to give an agent that ability, and they differ in how the model expresses what it wants to do.</p>
+<p>The first is direct tool calling over the Model Context Protocol (MCP). The second is local code execution, the approach used by Open Interpreter. The third is sandboxed code execution against a tool API, which Cloudflare calls "Code Mode" and Anthropic calls "code execution with MCP." This post compares the three and explains why the third option is becoming a good default for agents that use many tools across many steps.</p>
+<p><img alt="Two patterns for how an AI agent uses tools: direct tool calling versus code execution" src="../../assets/img/code-mode-flow-diagram.png" /></p>
+<p><em>Figure 1: With direct tool calling, every tool definition and every result passes through the model. With code execution, the model writes code that runs in a sandbox, and only the final result returns.</em></p>
+<h2 id="the-three-approaches">The three approaches<a class="headerlink" href="#the-three-approaches" title="Permanent link">&para;</a></h2>
+<p><strong>Direct tool calling (MCP).</strong> MCP gives agents a standard way to discover and call external tools. Each tool is shown to the model, and the model produces a tool call: a small JSON object with the tool name and its arguments. The system runs the tool and passes the result back into the model. This is simple and works well, but it has a cost. Models did not see many tool-call formats during training, so they are less reliable at producing them than at writing ordinary code. Every tool definition and every intermediate result also has to pass through the model's context window, which adds tokens, cost, and latency.</p>
+<p><strong>Open Interpreter.</strong> This open-source tool lets the model write code (Python, JavaScript, or shell) and run it directly on your machine. You describe a task in plain language, and the code runs locally, usually after you approve it. It is very useful for interactive work and one-off automation. The trade-off is access and control: the code runs with broad access to your files and environment, results can vary from run to run, and in its default online mode it sends some data to its own hosted services.</p>
+<p><strong>Sandboxed code execution (Code Mode).</strong> Here the tools from your MCP servers are turned into a typed code API. The model writes code against that API, and the code runs inside an isolated sandbox. The sandbox cannot reach the open internet or your files. It can only reach the specific tools you allow. The model gets to work in code, which it handles well, while you keep the standard MCP tool surface.</p>
+<h2 id="models-handle-code-better-than-tool-call-formats">Models handle code better than tool-call formats<a class="headerlink" href="#models-handle-code-better-than-tool-call-formats" title="Permanent link">&para;</a></h2>
+<p>The main reason this pattern works is straightforward: language models are more reliable at writing code than at producing tool-call formats. Recent results from 2025 support this.</p>
+<p>In November 2025, Anthropic's engineering team published "Code execution with MCP: building more efficient agents." In one example, a workflow that used about 150,000 tokens with direct tool calls was rebuilt so the model wrote code to use the same tools. The new version used about 2,000 tokens, a 98.7 percent reduction in tokens, cost, and latency. Cloudflare had described the same idea earlier in 2025 under the name "Code Mode." Both groups make the same point: models are good at writing code, and agents work better when they use that strength.</p>
+<p>Hugging Face reported a similar result in 2025. In their "CodeAgents + Structure" work, agents that expressed actions as code did better than a traditional JSON tool-calling agent across several benchmarks (GAIA, MATH, SimpleQA, and Frames). Their smolagents framework treats a code-writing agent as the default.</p>
+<p>The clearest controlled test is still the CodeAct study. It compared text, JSON, and code as action formats across 17 models, keeping the task the same and changing only the format. Code actions scored up to 20 points higher on multi-tool tasks and used about 30 percent fewer steps. The 2025 results are the same finding at a larger, production scale.</p>
+<p>The reasons are easy to see. Code lets the model use loops, conditionals, and variables to combine several steps in one action. It lets the model reuse functions from libraries it already knows. And model training contains a large amount of real code, while tool-call formats are a small and mostly synthetic part of training data.</p>
+<h2 id="what-the-benchmarks-suggest">What the benchmarks suggest<a class="headerlink" href="#what-the-benchmarks-suggest" title="Permanent link">&para;</a></h2>
+<p>Benchmark scores point in the same direction, but they need to be read with care.</p>
+<p><img alt="Top model scores on coding and function-calling benchmarks" src="../../assets/img/code-mode-benchmarks.png" /></p>
+<p><em>Figure 2: Models are close to saturation on coding tests, while dedicated function-calling tests still have more room. These are different benchmarks on different scales, so this is context, not a direct comparison.</em></p>
+<p>Models are now near the ceiling on coding tests. HumanEval is saturated above 95 percent, and the best SWE-bench Verified scores are around 80 percent. Dedicated function-calling tests still have more room: top models reach about 75 percent on the Berkeley Function Calling Leaderboard (BFCL v4) and about 61 percent on MCPMark.</p>
+<p>These are different benchmarks measured on different scales, so they are not a direct head-to-head. Some agentic tool-use benchmarks actually score high, such as TAU-bench and MCP-Atlas, which is why a simple "coding high, tool calling low" claim would be misleading. The reliable signal is the controlled comparison in the previous section, where only the format changes. There, code consistently wins.</p>
+<h2 id="compared-to-direct-mcp">Compared to direct MCP<a class="headerlink" href="#compared-to-direct-mcp" title="Permanent link">&para;</a></h2>
+<p>If models work better in code, then turning MCP tools into a code API captures that advantage. Three benefits follow.</p>
+<p>It scales to many tools. When a model is shown dozens of tools at once, it can struggle to choose the right one. Presented as a typed API with comments, the same tools are easier for the model to navigate, much like reading a code library.</p>
+<p>It avoids passing data through the model. With direct calling, every intermediate result returns to the model only to be copied into the next call. With code, the model writes a script that chains the calls and keeps the data in variables, returning only the final result. This is the main source of the token and step savings reported above.</p>
+<p>It keeps what makes MCP useful. You still get MCP's standard discovery, its authorization handled out of band, and its self-describing schemas. You only change how the model uses the tools, not the protocol itself.</p>
+<h2 id="compared-to-open-interpreter">Compared to Open Interpreter<a class="headerlink" href="#compared-to-open-interpreter" title="Permanent link">&para;</a></h2>
+<p>Open Interpreter already uses the "let the model write code" idea, so the difference here is not the format. It is safety and control.</p>
+<p>Isolation by default. Open Interpreter runs code on your machine with access to your files. Sandboxed code execution starts with no internet or file access, and the only way out is the specific tools you allow. You do not have to predict what the model might touch, because the boundary is fixed by the API you expose.</p>
+<p>Secrets stay out of reach. The sandbox reaches tools through bindings rather than by making its own authenticated calls, so access tokens stay with the system and never enter the model. A local interpreter that holds your environment variables cannot offer the same guarantee as easily.</p>
+<p>Built for unattended agents. Open Interpreter works best as an interactive assistant, where a person approves each step. Sandboxed code execution is designed for agent loops that run without a person watching, using short-lived sandboxes and a limited set of tools.</p>
+<h2 id="when-each-approach-fits">When each approach fits<a class="headerlink" href="#when-each-approach-fits" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -546,75 +637,73 @@
 <tr>
 <td>Action format</td>
 <td>JSON tool calls</td>
-<td>Code (local)</td>
+<td>Local code</td>
 <td>Code against a tool API</td>
 </tr>
 <tr>
-<td>Plays to model's code strength</td>
+<td>Suits the model's code skill</td>
 <td>No</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Handles many/complex tools well</td>
-<td>Weakens fast</td>
-<td>N/A (open-ended)</td>
+<td>Handles many tools</td>
+<td>Weakens quickly</td>
+<td>Open-ended</td>
 <td>Yes</td>
 </tr>
 <tr>
 <td>Multi-step efficiency</td>
-<td>Round-trips per call</td>
+<td>Result passes through model each call</td>
 <td>Good</td>
-<td>Good (chains in one block)</td>
+<td>Good, chains in one block</td>
 </tr>
 <tr>
 <td>Default isolation</td>
-<td>Harness-dependent</td>
+<td>Depends on harness</td>
 <td>Full local access</td>
-<td>Sandboxed, bindings only</td>
+<td>Sandboxed, allowed tools only</td>
 </tr>
 <tr>
-<td>Secrets exposure</td>
+<td>Secret exposure</td>
 <td>Possible</td>
 <td>Possible</td>
-<td>Hidden behind bindings</td>
+<td>Kept out of the model</td>
 </tr>
 <tr>
 <td>Best fit</td>
 <td>Simple, few-tool agents</td>
-<td>Interactive human-in-loop</td>
-<td>Unattended multi-tool agents</td>
+<td>Interactive, human-approved</td>
+<td>Unattended, many-tool agents</td>
 </tr>
 </tbody>
 </table>
-<h3 id="the-honest-caveats"><a class="toclink" href="../../2026/06/29/why-code-mode-wins/#the-honest-caveats">The honest caveats</a></h3>
-<p>This is an argument, not a sermon, so here is the other side.</p>
-<p>Direct MCP is perfectly fine when you have a handful of tools and short chains. The extra machinery of a sandbox and a generated API is not worth it for a weather lookup. For frontier models specifically, the raw tool-calling gap has narrowed since these ideas first appeared, so the advantage is largest for smaller and open-weight models and for genuinely complex, many-step tasks.</p>
-<p>Open Interpreter remains the better choice when the whole point is local access: cleaning a messy folder on your own disk, prototyping a data analysis interactively, or driving software on your actual machine. Code Mode's isolation is a feature for agents and a limitation if local reach is the goal.</p>
-<p>And Code Mode is not free. You need a real sandbox, a schema-to-code conversion step, and a runtime that can load and discard code quickly. Cloudflare can lean on its isolate platform for that; not every stack has an equivalent, though local sandboxes and ephemeral containers can stand in.</p>
-<h3 id="bottom-line"><a class="toclink" href="../../2026/06/29/why-code-mode-wins/#bottom-line">Bottom line</a></h3>
-<p>The single most useful fact in this whole debate is that language models are simply better at writing code than at emitting tool calls, and that is measurable, not aesthetic: up to 20 percent higher success and around 30 percent fewer steps in the CodeAct experiments. Direct MCP ignores that fact. Open Interpreter embraces it but pays for local power with weak isolation. Code Mode keeps the code-writing advantage and the standardized MCP tool surface while adding sandboxing and secret-hiding on top. For unattended agents that juggle many tools across many steps, that combination is hard to beat.</p>
+<p>No single approach is best for everything.</p>
+<p>Direct MCP is a good choice when you have only a few tools and short chains. The extra setup of a sandbox and a generated API is not worth it for a single lookup. For frontier models, the gap in raw tool-calling has also narrowed, so the benefit is largest for smaller or open-weight models and for complex, multi-step tasks.</p>
+<p>Open Interpreter is the better fit when local access is the goal, such as working with files on your own machine or exploring data interactively. The isolation in code execution is a benefit for agents but a limitation if you need local reach.</p>
+<p>Sandboxed code execution has its own costs. It needs a secure sandbox, a step to convert tool schemas into a code API, and a runtime that can start and stop code quickly. Not every stack has this ready, though containers and lightweight sandboxes can fill the gap.</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>The core point is that language models are more reliable at writing code than at producing tool-call formats. Direct MCP does not use this strength. Open Interpreter uses it but gives the model broad local access. Sandboxed code execution keeps the code-writing advantage and the standard MCP tool surface, and adds isolation and secret protection. For agents that use many tools across many steps, it is becoming an efficient and safer default.</p>
 <hr />
-<p><em>References: Cloudflare, "Code Mode: the better way to use MCP" (2025); Wang et al., "Executable Code Actions Elicit Better LLM Agents" (CodeAct, ICML 2024, arXiv:2402.01030); Open Interpreter documentation (docs.openinterpreter.com); Berkeley Function Calling Leaderboard v4 (gorilla.cs.berkeley.edu). Benchmark figures current as of mid-2026; verify before publishing.</em></p>
-    
-    
-  </div>
-</article>
-      
-      
-        
-          
+<p><em>References: Cloudflare, "Code Mode: the better way to use MCP" (2025); Anthropic Engineering, "Code execution with MCP: building more efficient agents" (Adam Jones and Conor Kelly, Nov 2025); Hugging Face, "CodeAgents + Structure: A Better Way to Execute Actions" (2025) and the smolagents framework; Wang et al., "Executable Code Actions Elicit Better LLM Agents" (CodeAct, ICML 2024), the foundational controlled study; Berkeley Function Calling Leaderboard v4; SWE-bench Verified, HumanEval, and MCPMark trackers; Open Interpreter documentation. Benchmark figures are top model scores as of mid-2026 and shift over time; verify before publishing.</em></p>
 
 
 
-<nav class="md-pagination">
+
+
+
+
+
+
   
-</nav>
-        
-      
-    </div>
-  </div>
 
+
+
+
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -651,7 +740,7 @@
       
       
     
-    <a href="https://www.linkedin.com/in/sanjayshekhar" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+    <a href="https://www.linkedin.com/in/sanjaymaha/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
     </a>
   
